@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="media/bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body style="background-image: url(images/22.jpg) ; background-position: center; background-repeat: no-repeat ; background-size: cover;" >
+    <div class="container py-5">
+        <div class="w-100 d-flex justify-content-center align-items-center">
+            <h1 class="position-relative mb-3 bg-light">Bookmarker<div class="layer"></div>
+            </h1>
+        </div>
+        <div class="w-100 border-2 border-black mt-5 mb-3 py-4 border-doted">
+            <div class="d-flex justify-content-center align-items-center color">
+                <h2 class="bg-light"><i class="fa-solid fa-bookmark "></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+            </div>
+            <form>
+                <div class="my-3">
+                    <label for="BmName" class="text-capitalize fw-bold ms-1 form-label bg-light">
+                        <i class="fa-solid fa-book-bookmark me-1"></i>
+                        site name
+                    </label>
+                    <div class="w-100 position-relative">
+                        <input type="text" id="BmName" placeholder="Bookmark Name"
+                            class="form-control my-2 normal-style">
+                        <span class="icon-group position-absolute me-2">
+                            <i class="fa-solid fa-circle-exclamation inValid-1 fa-lg wrong d-none"></i>
+                            <i class="fa-solid fa-check fa-lg checked validate-1 d-none"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <label for="BmUrl" class="text-capitalize fw-bold ms-1 form-label bg-light">
+                        <i class="fa-solid fa-link me-1"></i>
+                        Site URL
+                    </label>
+                    <div class="w-100 position-relative">
+                        <input type="text" id="BmUrl" placeholder="Website URL" class="form-control my-2 normal-style">
+                        <span class="icon-group position-absolute me-2">
+                            <i class="fa-solid fa-circle-exclamation fa-lg inValid-2 wrong d-none"></i>
+                            <i class="fa-solid fa-check fa-lg checked validate-2 d-none"></i>
+                        </span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-info px-5 d-block mx-auto special-btn"
+                    id="subBtn">Submit</button>
+            </form>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            role="dialog">
+            <div class="modal-dialog modal-dialog-centered border-0">
+                <div class="modal-content p-3">
+                    <div class="modal-header pt-4 border-0">
+                        <div class="modal-title d-flex justify-content-between pt-1" id="exampleModalLabel"><span
+                                class="shape bg-danger"></span><span class="shape bg-warning"></span><span
+                                class="shape bg-green"></span></div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="pb-4">Site Name or Url is not valid, Please follow the rules below :</h5>
+                        <p><i class="fa-regular fa-circle-right fa-lg me-2 text-danger"></i> Site name must contain at
+                            least 3
+                            characters
+                        </p>
+                        <p><i class="fa-regular fa-circle-right fa-lg me-2 text-danger "></i> Site URL must be a valid
+                            one
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-5" id="closeLayer"></div>
+        </div>
+        <table class="table table-light text-center">
+            <thead class="fw-bold">
+                <tr>
+                    <td>Index</td>
+                    <td>Website Name</td>
+                    <td>Visit</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody id="showData">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

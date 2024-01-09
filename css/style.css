@@ -1,0 +1,23 @@
+
+h1 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 28px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+}
+.special-btn {
+    background-color: #152ae4;
+    border-color: #1d69cc;
+}
+.special-btn:hover {
+    background-color: #135eb3;
+}
+.ground{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
